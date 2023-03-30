@@ -8,17 +8,29 @@ const TodoInput = () => {
   const { todo, dispatch } = useTodoContext()
   const [itemValue, setItemValue] = useState('');
 
-  const newTodo = {
-    id: Math.floor(Math.random() * 1000),
-    text: itemValue,
-    completed: false,
-  }
+  //console.log('App.js çekilen todo değer kontrolü ->', todo)
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
+
+    const generateID = () => {
+      //id: Math.floor(Math.random() * 1000) //ilk başta ID'yi random sayılar ile generate ediyorduk
+      const newID = todo.length > 0 ? Math.max(...todo.map(todo => todo.id)) + 1 : 1;
+      //console.log('App.js oluşturulan newID ->', newID)
+      return Number(newID)
+    }
+  
+    const newTodo = {
+      id: generateID(),
+      text: itemValue,
+      completed: false,
+    }
+  
     dispatch( {type: "ADD_TODO", payload: newTodo})
     setItemValue("")
   }
+  
 
   return (
     <form onSubmit={handleSubmit}>
