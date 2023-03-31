@@ -46,7 +46,7 @@ const TodoDetails = ({ item }) => {
       onBlur={handleInputBlur}
       />
       <button className="destroy" onClick={handleDelete}>
-        X
+        x
       </button>
     </div>
   );

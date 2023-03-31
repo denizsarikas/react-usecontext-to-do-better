@@ -1,19 +1,19 @@
 
+
 import './App.css';
 import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
+import Footer from './components/Footer'
+import Header from './components/Header';
 
 function App() {
 
   return (
     <div className="App">
-      <div>Header</div>
-      <div>Enter your todo headline</div>
-      {/* Todo input field Below */}
+      <Header />
       <TodoInput />
-      {/* Todo List Below */}
       <TodoList />
-      <div>footer</div>
+      <Footer />
     </div>
   );
 }

@@ -1,3 +1,6 @@
+//usecontext yapılarını ben bu şekilde kullanıyorum. tanımladığım contextteki fonksiyonları import edip kullanmak yerine bu şekilde yaparak
+//reduxa benzer bir yapı oluşturuyorum ve her useContext kullandığımda benzer yapıyı kullanıyorum.
+
 import { TodoContext } from '../context/TodoContext'
 import { useContext } from 'react'
 

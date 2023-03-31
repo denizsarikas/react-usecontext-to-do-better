@@ -11,13 +11,11 @@ const TodoList = () => {
 
 
   return (
-<div className="home">
-      <div className="blogs">
+      <div className="todos">
         {todo && todo.map((item) => (       
           <TodoDetails key={item.id} item={item} />
         ))}
       </div>
-    </div>
   );
 };
 
